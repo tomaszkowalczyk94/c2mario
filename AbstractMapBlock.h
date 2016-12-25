@@ -4,7 +4,7 @@ class AbstractMapBlock
 {
 public:
 	AbstractMapBlock();
-	~AbstractMapBlock();
+	virtual ~AbstractMapBlock();
 
 	int width = 25;
 	int height = 25;
@@ -12,6 +12,6 @@ public:
 	int posX = 0;
 	int posY = 0;
 
-	virtual sf::Sprite getSprite() = 0;
+	virtual sf::Sprite* getSprite() = 0;
 };
 

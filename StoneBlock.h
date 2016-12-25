@@ -9,10 +9,10 @@ public:
 	StoneBlock();
 	~StoneBlock();
 
-	sf::Sprite getSprite();
+	sf::Sprite* getSprite();
 
 protected:
-	sf::Texture texture;
-	sf::Sprite sprite;
+	sf::Texture *texture;
+	sf::Sprite *sprite;
 };
 

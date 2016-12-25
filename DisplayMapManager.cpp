@@ -17,20 +17,21 @@ DisplayMapManager::~DisplayMapManager()
 void DisplayMapManager::display()
 {
 	this->map->backgroundSprite.setPosition(
-		this->getWindowXPostion(this->map->characterPositionMapX),
-		this->getWindowYPostion(this->map->characterPositionMapY)
+		this->getBackgroundWindowXPosition(this->map->characterPositionMapX),
+		this->getBackgroundWindowYPosition(this->map->characterPositionMapY)
 	);
 
 	this->map->character.characterSprite.setPosition(this->getCharacterWindowX(), this->getCharacterWindowY());
 
-
-
-
-
 	this->window->draw(this->map->backgroundSprite);
 
 	for (AbstractMapBlock *block : this->map->blockList) {
-		this->window->draw(block->getSprite());
+		block->getSprite()->setPosition(
+			this->getWindowXPostion(block->posX),
+			this->getWindowYPostion(block->posY)
+		);
+
+		this->window->draw(* block->getSprite());
 	}
 
 	this->window->draw(this->map->character.characterSprite);
@@ -38,12 +39,18 @@ void DisplayMapManager::display()
 
 void DisplayMapManager::moveCharacterLeft()
 {
-	this->map->characterPositionMapX++;
+	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
+		this->map->characterPositionMapX++;
+	}
+
+	
 }
 
 void DisplayMapManager::moveCharacterRight()
 {
-	this->map->characterPositionMapX--;
+	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
+		this->map->characterPositionMapX--;
+	}
 }
 
 float DisplayMapManager::getCharacterWindowX()
@@ -58,10 +65,20 @@ float DisplayMapManager::getCharacterWindowY()
 
 float DisplayMapManager::getWindowXPostion(float mapXPostion)
 {
-	return -(mapXPostion - this->getCharacterWindowX());
+	return mapXPostion - (-this->getBackgroundWindowXPosition(this->map->characterPositionMapX));
 }
 
 float DisplayMapManager::getWindowYPostion(float mapYPostion)
 {
-	return -(mapYPostion - this->getCharacterWindowY());
+	return mapYPostion - (-this->getBackgroundWindowYPosition(this->map->characterPositionMapY));
+}
+
+float DisplayMapManager::getBackgroundWindowXPosition(float characterPositionMapX)
+{
+	return -(characterPositionMapX - this->getCharacterWindowX());
+}
+
+float DisplayMapManager::getBackgroundWindowYPosition(float characterPositionMapY)
+{
+	return -(characterPositionMapY - this->getCharacterWindowY());
 }

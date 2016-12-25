@@ -17,8 +17,9 @@ public:
 	int widthMap;
 	float characterPositionMapX;
 	float characterPositionMapY;
-	std::list<AbstractMapBlock*> blockList;
+	std::list<AbstractMapBlock *> blockList;
 
+	bool canMove(float x, float y);
 
 };
 

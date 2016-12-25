@@ -4,9 +4,11 @@
 
 AbstractMapBlock::AbstractMapBlock()
 {
-}
 
+}
 
 AbstractMapBlock::~AbstractMapBlock()
 {
+	
 }
+

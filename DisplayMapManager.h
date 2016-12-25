@@ -24,5 +24,8 @@ protected:
 	float getCharacterWindowY();
 	float getWindowXPostion(float mapXPostion);
 	float getWindowYPostion(float mapYPostion);
+	float getBackgroundWindowXPosition(float characterPositionMapX);
+	float getBackgroundWindowYPosition(float characterPositionMapY);
+	
 };
 
