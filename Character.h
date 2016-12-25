@@ -1,4 +1,3 @@
-#pragma once
 #include <SFML/Graphics.hpp>
 
 class Character
@@ -10,5 +9,7 @@ public:
 	int height = 25;
 	sf::Texture characterTexture;
 	sf::Sprite characterSprite;
+	int gravityStatus = 0;
+
 };
 

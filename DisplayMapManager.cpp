@@ -42,14 +42,26 @@ void DisplayMapManager::moveCharacterLeft()
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX++;
 	}
-
-	
 }
 
 void DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX--;
+	}
+}
+
+void DisplayMapManager::moveCharacterUp()
+{
+	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
+		this->map->characterPositionMapY--;
+	}
+}
+
+void DisplayMapManager::moveCharacterDown()
+{
+	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+1)) {
+		this->map->characterPositionMapY++; 
 	}
 }
 

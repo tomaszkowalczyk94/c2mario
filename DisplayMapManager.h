@@ -18,6 +18,8 @@ public:
 	void display();
 	void moveCharacterLeft();
 	void moveCharacterRight();
+	void moveCharacterUp();
+	void moveCharacterDown();
 
 protected:
 	float getCharacterWindowX();

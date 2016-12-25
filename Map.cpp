@@ -1,7 +1,10 @@
+#pragma once
 #include "stdafx.h"
 #include "Map.h"
 #include "StoneBlock.h"
+#include "LongFloorBlock.h"
 #include <iostream>
+
 Map::Map()
 {
 	this->backgroundTexture.loadFromFile("background.png");
@@ -11,8 +14,16 @@ Map::Map()
 	this->characterPositionMapY = 25;
 
 	StoneBlock *stoneBlock = new StoneBlock;
-	this->blockList.push_front(stoneBlock);
+	StoneBlock *stoneBlock2 = new StoneBlock;
+	stoneBlock2->posX = 25;
+	stoneBlock2->posY = 1155;
 
+	LongFloorBlock *longFloorBlock = new LongFloorBlock;
+	
+
+	this->blockList.push_front(stoneBlock);
+	this->blockList.push_front(stoneBlock2);
+	this->blockList.push_front(longFloorBlock);
 }
 
 
@@ -22,21 +33,6 @@ Map::~Map()
 }
 
 
-/*
-bool isCollision(Box b1, Box b2)
-{
-Vector2 p1 = b1.position;
-Vector2 p2 = b2.position;
-
-if (p1.x > p2.x + b2.width || p1.x + b1.width < p2.x ||
-p1.y > p2.y + b2.height || p1.y + b1.height < p2.y)
-return false;
-
-else
-return true;
-}
-
-*/
 bool Map::canMove(float x, float y)
 {
 	for (AbstractMapBlock *block : this->blockList) {
