@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include "StoneBlock.h"
+#include <SFML/Graphics.hpp>
+
+StoneBlock::StoneBlock()
+{
+	this->texture.loadFromFile("stoneBlock.png");
+	this->sprite.setTexture(this->texture);
+
+	this->width = 25;
+	this->height = 25;
+}
+
+
+StoneBlock::~StoneBlock()
+{
+
+}
+
+sf::Sprite StoneBlock::getSprite()
+{
+	return this->sprite;
+}
