@@ -40,7 +40,7 @@ void DisplayMapManager::display()
 bool DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
-		this->map->characterPositionMapX++;
+		this->map->characterPositionMapX += 5;
 		return true;
 	}
 	return false;
@@ -49,7 +49,7 @@ bool DisplayMapManager::moveCharacterLeft()
 bool DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
-		this->map->characterPositionMapX--;
+		this->map->characterPositionMapX -= 5;
 		return true;
 	}
 	return false;
@@ -58,7 +58,7 @@ bool DisplayMapManager::moveCharacterRight()
 bool DisplayMapManager::moveCharacterUp()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
-		this->map->characterPositionMapY--;
+		this->map->characterPositionMapY -= 7;
 		return true;
 	}
 	return false;
@@ -67,7 +67,7 @@ bool DisplayMapManager::moveCharacterUp()
 bool DisplayMapManager::moveCharacterDown()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+1)) {
-		this->map->characterPositionMapY++; 
+		this->map->characterPositionMapY += 7;
 		return true;
 	}
 	return false;

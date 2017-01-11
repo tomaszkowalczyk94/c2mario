@@ -15,7 +15,7 @@ LongFloorBlock::LongFloorBlock()
 	this->height = 32;
 
 	this->posX = 5;
-	this->posY = 400;
+	this->posY = 420;
 }
 
 

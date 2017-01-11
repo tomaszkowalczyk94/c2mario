@@ -11,19 +11,24 @@ Map::Map()
 	this->backgroundSprite.setTexture(this->backgroundTexture);
 
 	this->characterPositionMapX = 25;
-	this->characterPositionMapY = 25;
+	this->characterPositionMapY = 420-26;
 
 	StoneBlock *stoneBlock = new StoneBlock;
 	StoneBlock *stoneBlock2 = new StoneBlock;
 	stoneBlock2->posX = 25;
 	stoneBlock2->posY = 1155;
+	
 
 	LongFloorBlock *longFloorBlock = new LongFloorBlock;
+	LongFloorBlock *longFloorBlock2 = new LongFloorBlock;
+
+	longFloorBlock2->posX = 805;
 	
 
 	this->blockList.push_front(stoneBlock);
 	this->blockList.push_front(stoneBlock2);
 	this->blockList.push_front(longFloorBlock);
+	this->blockList.push_front(longFloorBlock2);
 }
 
 
