@@ -40,28 +40,28 @@ void DisplayMapManager::display()
 void DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
-		this->map->characterPositionMapX++;
+		this->map->characterPositionMapX += 5;
 	}
 }
 
 void DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
-		this->map->characterPositionMapX--;
+		this->map->characterPositionMapX -= 5;
 	}
 }
 
 void DisplayMapManager::moveCharacterUp()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
-		this->map->characterPositionMapY--;
+		this->map->characterPositionMapY -= 7;
 	}
 }
 
 void DisplayMapManager::moveCharacterDown()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+1)) {
-		this->map->characterPositionMapY++; 
+		this->map->characterPositionMapY += 7;
 	}
 }
 
