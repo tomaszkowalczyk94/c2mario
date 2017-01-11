@@ -29,6 +29,7 @@ void Gravity::interactGravity()
 
 void Gravity::characterJump()
 {
+
 	sf::Time now = this->clock.getElapsedTime();
 
 	Character *character = &this->displayMapManager->map->character;
@@ -46,8 +47,10 @@ void Gravity::characterJump()
 
 	if (character->gravityStatus == GRAVITY_STATUS_JUMP) {
 
-		if (now.asMilliseconds() < this->startJump.asMilliseconds() + 200) {
-			this->displayMapManager->moveCharacterUp();
+		if (now.asMilliseconds() < this->startJump.asMilliseconds() + 2000) {
+			if (!this->displayMapManager->moveCharacterUp()) {
+				this->stopJump();
+			}
 		}
 		else {
 			this->stopJump();

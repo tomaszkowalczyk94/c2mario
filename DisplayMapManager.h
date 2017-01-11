@@ -16,10 +16,10 @@ public:
 	~DisplayMapManager();
 
 	void display();
-	void moveCharacterLeft();
-	void moveCharacterRight();
-	void moveCharacterUp();
-	void moveCharacterDown();
+	bool moveCharacterLeft();
+	bool moveCharacterRight();
+	bool moveCharacterUp();
+	bool moveCharacterDown();
 
 protected:
 	float getCharacterWindowX();
