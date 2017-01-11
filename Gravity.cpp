@@ -46,7 +46,7 @@ void Gravity::characterJump()
 
 	if (character->gravityStatus == GRAVITY_STATUS_JUMP) {
 
-		if (now.asMilliseconds() < this->startJump.asMilliseconds() + 2000) {
+		if (now.asMilliseconds() < this->startJump.asMilliseconds() + 200) {
 			this->displayMapManager->moveCharacterUp();
 		}
 		else {
