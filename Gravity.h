@@ -13,10 +13,12 @@ public:
 	void interactGravity();
 	void characterJump();
 	void stopJump();
+	
 
 protected:
 	DisplayMapManager *displayMapManager;
 	sf::Time startJump;
 	sf::Clock clock;
+	
 };
 

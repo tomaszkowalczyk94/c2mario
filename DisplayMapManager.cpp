@@ -37,32 +37,40 @@ void DisplayMapManager::display()
 	this->window->draw(this->map->character.characterSprite);
 }
 
-void DisplayMapManager::moveCharacterLeft()
+bool DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX += 5;
+		return true;
 	}
+	return false;
 }
 
-void DisplayMapManager::moveCharacterRight()
+bool DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX -= 5;
+		return true;
 	}
+	return false;
 }
 
-void DisplayMapManager::moveCharacterUp()
+bool DisplayMapManager::moveCharacterUp()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
 		this->map->characterPositionMapY -= 7;
+		return true;
 	}
+	return false;
 }
 
-void DisplayMapManager::moveCharacterDown()
+bool DisplayMapManager::moveCharacterDown()
 {
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+1)) {
 		this->map->characterPositionMapY += 7;
+		return true;
 	}
+	return false;
 }
 
 float DisplayMapManager::getCharacterWindowX()
