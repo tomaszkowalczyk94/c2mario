@@ -17,7 +17,7 @@ int main()
 
 	while (window.isOpen())
 	{
-		
+
 		gravity.interactGravity();
 
 		sf::Event event;
