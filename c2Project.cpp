@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "Map.h"
 #include "Gravity.h"
 
@@ -14,6 +15,11 @@ int main()
 	Map map;
 	DisplayMapManager displayMapManager(&map, &window);
 	Gravity gravity(&displayMapManager);
+	sf::SoundBuffer buffer;
+	buffer.loadFromFile("jump.ogg");
+	sf::Sound sound;
+	sound.setPlayingOffset(sf::seconds(2));
+	
 	
 	while (window.isOpen())
 	{
@@ -40,6 +46,8 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
 			gravity.characterJump();
+			sound.setBuffer(buffer);
+			sound.play();
 		}
 		else {
 			gravity.stopJump();
