@@ -14,10 +14,12 @@ int main()
 	Map map;
 	DisplayMapManager displayMapManager(&map, &window);
 	Gravity gravity(&displayMapManager);
-
+	
 	while (window.isOpen())
 	{
 
+
+		
 		gravity.interactGravity();
 
 		sf::Event event;
@@ -48,7 +50,7 @@ int main()
 
 		window.clear(sf::Color(0, 0, 0));
 
-		displayMapManager.display();
+		displayMapManager.display(map.characterPositionMapX, map.characterPositionMapY);
 		window.display();
 	}
 }
