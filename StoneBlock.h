@@ -11,6 +11,8 @@ public:
 
 	sf::Sprite* getSprite();
 
+	void constructor();
+
 protected:
 	sf::Texture *texture;
 	sf::Sprite *sprite;

@@ -21,13 +21,10 @@ Map::Map()
 	stoneBlock2->posY = 1155;
 
 	Block *block1 = new Block;
-	block1->posX = 25;
-	block1->posY = 615;
-	this->blockList.push_front(block1);
-
-
-	this->blockList.push_front(stoneBlock);
-	this->blockList.push_front(stoneBlock2);
+	this->addMapElem(block1, 25, 615);
+	this->addMapElem(block1, 95, 615);
+	this->addMapElem(block1, 165, 615);
+	this->addMapElem(block1, 300, 615);
 }
 
 
@@ -46,4 +43,16 @@ bool Map::canMove(float x, float y)
 	}
 
 	return true;
+}
+
+void Map::addMapElem(AbstractMapBlock *mapElem, int x, int y)
+{
+	AbstractMapBlock* newBlock = (AbstractMapBlock*) malloc (sizeof AbstractMapBlock);
+	memcpy(newBlock, mapElem, sizeof AbstractMapBlock);
+
+	newBlock->constructor();
+	newBlock->posX = x;
+	newBlock->posY = y;
+	
+	this->blockList.push_front(newBlock);
 }

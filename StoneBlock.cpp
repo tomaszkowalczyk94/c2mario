@@ -5,17 +5,7 @@
 
 StoneBlock::StoneBlock()
 {
-	this->texture = new sf::Texture;
-	this->texture->loadFromFile("stoneBlock.png");
-
-	this->sprite = new sf::Sprite;
-	this->sprite->setTexture(*this->texture);
-
-	this->width = 70;
-	this->height = 70;
-
-	this->posX = 100;
-	this->posY = 25;
+	this->constructor();
 }
 
 
@@ -27,4 +17,16 @@ StoneBlock::~StoneBlock()
 sf::Sprite* StoneBlock::getSprite()
 {
 	return this->sprite;
+}
+
+void StoneBlock::constructor()
+{
+	this->texture = new sf::Texture;
+	this->texture->loadFromFile("stoneBlock.png");
+
+	this->sprite = new sf::Sprite;
+	this->sprite->setTexture(*this->texture);
+
+	this->width = 70;
+	this->height = 70;
 }

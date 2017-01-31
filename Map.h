@@ -20,6 +20,8 @@ public:
 	std::list<AbstractMapBlock *> blockList;
 
 	bool canMove(float x, float y);
+protected:
+	void addMapElem(AbstractMapBlock *mapElem, int x, int y);
 
 };
 
