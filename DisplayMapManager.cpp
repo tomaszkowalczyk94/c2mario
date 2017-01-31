@@ -41,7 +41,8 @@ bool DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX += 5;
-		this->map->character.characterSprite.setScale(1.f, 1.f);
+		this->map->character.characterSprite.setTextureRect(sf::IntRect(0, 0, this->map->character.width, this->map->character.height));
+		
 		
 		return true;
 	}
@@ -52,7 +53,7 @@ bool DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX -= 5;
-		this->map->character.characterSprite.setScale(-1.f, 1.f);
+		this->map->character.characterSprite.setTextureRect(sf::IntRect(this->map->character.width, 0, -(this->map->character.width), this->map->character.height));
 
 		return true;
 	}
