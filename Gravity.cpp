@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Gravity.h"
+#include <SFML/Audio.hpp>
 
 Gravity::Gravity(DisplayMapManager *displayMapManager)
 {
@@ -29,6 +30,12 @@ void Gravity::interactGravity()
 
 void Gravity::characterJump()
 {
+	sf::SoundBuffer buffer;
+	buffer.loadFromFile("jump.ogg");
+	sf::Sound sound;
+	sound.setBuffer(buffer);
+	sound.play();
+
 
 	sf::Time now = this->clock.getElapsedTime();
 
@@ -43,6 +50,9 @@ void Gravity::characterJump()
 		this->startJump = now;
 		this->displayMapManager->moveCharacterUp();
 		character->gravityStatus = GRAVITY_STATUS_JUMP;
+		if(sound.getStatus() != sf::SoundSource::Playing)
+			sound.play();
+		
 	}
 
 	if (character->gravityStatus == GRAVITY_STATUS_JUMP) {

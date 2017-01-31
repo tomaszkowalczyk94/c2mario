@@ -15,10 +15,6 @@ int main()
 	Map map;
 	DisplayMapManager displayMapManager(&map, &window);
 	Gravity gravity(&displayMapManager);
-	sf::SoundBuffer buffer;
-	buffer.loadFromFile("jump.ogg");
-	sf::Sound sound;
-	sound.setPlayingOffset(sf::seconds(2));
 	
 	
 	while (window.isOpen())
