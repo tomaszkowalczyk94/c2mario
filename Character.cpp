@@ -4,8 +4,11 @@
 
 Character::Character()
 {
-	this->characterTexture.loadFromFile("img/character/front.png");
+	
+	this->characterTexture.loadFromFile("walk.png");
 	this->characterSprite.setTexture(this->characterTexture);
+	this->characterSprite.setTextureRect(sf::IntRect(0, 0, 75, 96));
+
 }
 
 

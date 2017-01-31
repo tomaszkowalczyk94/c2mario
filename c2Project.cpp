@@ -15,6 +15,13 @@ int main()
 	Map map;
 	DisplayMapManager displayMapManager(&map, &window);
 	Gravity gravity(&displayMapManager);
+
+	sf::SoundBuffer buffer;
+	buffer.loadFromFile("music.ogg");
+	sf::Sound sound;
+	sound.setBuffer(buffer);
+	sound.setLoop(true);
+	sound.play();
 	
 	
 
