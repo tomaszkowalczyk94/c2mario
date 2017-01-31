@@ -13,7 +13,7 @@ Map::Map()
 	
 
 	this->characterPositionMapX = 25;
-	this->characterPositionMapY = 420-94;
+	this->characterPositionMapY = 420-97;
 
 	StoneBlock *stoneBlock = new StoneBlock;
 	StoneBlock *stoneBlock2 = new StoneBlock;

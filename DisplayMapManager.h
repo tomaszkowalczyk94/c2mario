@@ -11,6 +11,7 @@ class DisplayMapManager
 public:
 	Map *map;
 	sf::RenderWindow *window;
+	sf::Clock clock;
 
 	DisplayMapManager(Map * map, sf::RenderWindow * window);
 	~DisplayMapManager();
@@ -20,6 +21,7 @@ public:
 	bool moveCharacterRight();
 	bool moveCharacterUp();
 	bool moveCharacterDown();
+
 
 protected:
 	float getCharacterWindowX();
