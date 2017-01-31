@@ -17,6 +17,9 @@ int main()
 	Gravity gravity(&displayMapManager);
 	
 	
+
+	
+	
 	while (window.isOpen())
 	{
 
@@ -42,6 +45,7 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
 			gravity.characterJump();
+
 		}
 		else {
 			gravity.stopJump();
