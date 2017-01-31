@@ -5,8 +5,10 @@
 Character::Character()
 {
 	
-	this->characterTexture.loadFromFile("walk.png");
+	this->characterTexture.create(75,96);
+	this->characterSprite.setColor(sf::Color(0, 255, 0));
 	this->characterSprite.setTexture(this->characterTexture);
+	
 	this->characterSprite.setTextureRect(sf::IntRect(0, 0, 75, 96));
 
 }
