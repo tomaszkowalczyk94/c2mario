@@ -3,7 +3,7 @@
 #include "Map.h"
 #include "StoneBlock.h"
 #include "Block.h"
-
+#include "GroundBlock.h"
 #include <iostream>
 
 Map::Map()
@@ -15,16 +15,23 @@ Map::Map()
 	this->characterPositionMapX = 25;
 	this->characterPositionMapY = 420-97;
 
-	StoneBlock *stoneBlock = new StoneBlock;
-	StoneBlock *stoneBlock2 = new StoneBlock;
-	stoneBlock2->posX = 25;
-	stoneBlock2->posY = 1155;
 
-	Block *block1 = new Block;
-	this->addMapElem(block1, 25, 615);
-	this->addMapElem(block1, 95, 615);
-	this->addMapElem(block1, 165, 615);
-	this->addMapElem(block1, 300, 615);
+	Block *block = new Block;
+	GroundBlock *groundBlock = new GroundBlock;
+
+	this->addMapElem(groundBlock, 25, 615);
+	this->addMapElem(block, 25, 685);
+
+	this->addMapElem(groundBlock, 95, 615);
+	this->addMapElem(block, 95, 685);
+
+	this->addMapElem(groundBlock, 165, 615);
+	this->addMapElem(block, 165, 685);
+
+	this->addMapElem(groundBlock, 430, 685);
+
+	this->addMapElem(groundBlock, 500, 615);
+	this->addMapElem(block, 500, 685);
 }
 
 
