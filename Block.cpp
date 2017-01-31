@@ -1,12 +1,11 @@
-#pragma once
 #include "stdafx.h"
-#include "StoneBlock.h"
+#include "Block.h"
 #include <SFML/Graphics.hpp>
 
-StoneBlock::StoneBlock()
+Block::Block()
 {
 	this->texture = new sf::Texture;
-	this->texture->loadFromFile("stoneBlock.png");
+	this->texture->loadFromFile("img/block.png");
 
 	this->sprite = new sf::Sprite;
 	this->sprite->setTexture(*this->texture);
@@ -14,17 +13,17 @@ StoneBlock::StoneBlock()
 	this->width = 70;
 	this->height = 70;
 
-	this->posX = 100;
-	this->posY = 25;
+	this->posX = 0;
+	this->posY = 0;
+
 }
 
 
-StoneBlock::~StoneBlock()
+Block::~Block()
 {
-	
 }
 
-sf::Sprite* StoneBlock::getSprite()
+sf::Sprite* Block::getSprite()
 {
 	return this->sprite;
 }

@@ -1,13 +1,11 @@
 #pragma once
 #include "AbstractMapBlock.h"
-#include <SFML/Graphics.hpp>
-
-class LongFloorBlock :
+class Block :
 	public AbstractMapBlock
 {
 public:
-	LongFloorBlock();
-	~LongFloorBlock();
+	Block();
+	~Block();
 
 	sf::Sprite* getSprite();
 

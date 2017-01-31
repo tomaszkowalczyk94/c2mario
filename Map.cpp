@@ -2,7 +2,8 @@
 #include "stdafx.h"
 #include "Map.h"
 #include "StoneBlock.h"
-#include "LongFloorBlock.h"
+#include "Block.h"
+
 #include <iostream>
 
 Map::Map()
@@ -18,18 +19,15 @@ Map::Map()
 	StoneBlock *stoneBlock2 = new StoneBlock;
 	stoneBlock2->posX = 25;
 	stoneBlock2->posY = 1155;
-	
 
-	LongFloorBlock *longFloorBlock = new LongFloorBlock;
-	LongFloorBlock *longFloorBlock2 = new LongFloorBlock;
+	Block *block1 = new Block;
+	block1->posX = 25;
+	block1->posY = 615;
+	this->blockList.push_front(block1);
 
-	longFloorBlock2->posX = 805;
-	
 
 	this->blockList.push_front(stoneBlock);
 	this->blockList.push_front(stoneBlock2);
-	this->blockList.push_front(longFloorBlock);
-	this->blockList.push_front(longFloorBlock2);
 }
 
 

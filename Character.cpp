@@ -4,7 +4,7 @@
 
 Character::Character()
 {
-	this->characterTexture.loadFromFile("mushroom.png");
+	this->characterTexture.loadFromFile("img/character/front.png");
 	this->characterSprite.setTexture(this->characterTexture);
 }
 
