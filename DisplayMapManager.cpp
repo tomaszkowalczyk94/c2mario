@@ -14,11 +14,11 @@ DisplayMapManager::~DisplayMapManager()
 {
 }
 
-void DisplayMapManager::display()
+void DisplayMapManager::display(int x, int y)
 {
+	this->map->backgroundTexture.setRepeated(true);
 	this->map->backgroundSprite.setPosition(
-		this->getBackgroundWindowXPosition(this->map->characterPositionMapX),
-		this->getBackgroundWindowYPosition(this->map->characterPositionMapY)
+		0,0
 	);
 
 	this->map->character.characterSprite.setPosition(this->getCharacterWindowX(), this->getCharacterWindowY());
@@ -80,7 +80,7 @@ float DisplayMapManager::getCharacterWindowX()
 
 float DisplayMapManager::getCharacterWindowY()
 {
-	return (float)(WINDOWS_HEIGHT - this->map->character.height) / 2;
+	return (float)(WINDOWS_HEIGHT - this->map->character.height) / 1.3;
 }
 
 float DisplayMapManager::getWindowXPostion(float mapXPostion)

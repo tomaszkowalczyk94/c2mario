@@ -2,8 +2,8 @@
 #include <SFML/Graphics.hpp>
 
 
-#define WINDOWS_WIDTH 1000
-#define WINDOWS_HEIGHT 400
+#define WINDOWS_WIDTH 1280
+#define WINDOWS_HEIGHT 720
 
 
 class DisplayMapManager
@@ -15,7 +15,7 @@ public:
 	DisplayMapManager(Map * map, sf::RenderWindow * window);
 	~DisplayMapManager();
 
-	void display();
+	void display(int x, int y);
 	bool moveCharacterLeft();
 	bool moveCharacterRight();
 	bool moveCharacterUp();

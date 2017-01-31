@@ -9,6 +9,7 @@ Map::Map()
 {
 	this->backgroundTexture.loadFromFile("background.png");
 	this->backgroundSprite.setTexture(this->backgroundTexture);
+	
 
 	this->characterPositionMapX = 25;
 	this->characterPositionMapY = 420-26;
