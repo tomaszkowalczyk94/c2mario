@@ -42,8 +42,6 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
 			gravity.characterJump();
-			sound.setBuffer(buffer);
-			sound.play();
 		}
 		else {
 			gravity.stopJump();
