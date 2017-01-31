@@ -59,6 +59,7 @@ bool DisplayMapManager::moveCharacterRight()
 bool DisplayMapManager::moveCharacterUp()
 {
 	
+
 	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
 		this->map->characterPositionMapY -= 7;
 		return true;

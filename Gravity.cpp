@@ -5,6 +5,8 @@
 Gravity::Gravity(DisplayMapManager *displayMapManager)
 {
 	this->displayMapManager = displayMapManager;
+	this->buffer.loadFromFile("jump.ogg");
+	this->sound.setBuffer(this->buffer);
 }
 
 
@@ -30,11 +32,7 @@ void Gravity::interactGravity()
 
 void Gravity::characterJump()
 {
-	sf::SoundBuffer buffer;
-	buffer.loadFromFile("jump.ogg");
-	sf::Sound sound;
-	sound.setBuffer(buffer);
-
+	
 
 	sf::Time now = this->clock.getElapsedTime();
 
@@ -46,7 +44,7 @@ void Gravity::characterJump()
 	}
 
 	if (character->gravityStatus == GRAVITY_STATUS_NORMAL) {
-		sound.play();
+		this->sound.play();
 		this->startJump = now;
 		this->displayMapManager->moveCharacterUp();
 		character->gravityStatus = GRAVITY_STATUS_JUMP;
