@@ -90,7 +90,7 @@ bool DisplayMapManager::moveCharacterUp()
 {
 	
 
-	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-1)) {
+	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY-7)) {
 		this->map->characterPositionMapY -= 7;
 		return true;
 	}
@@ -99,7 +99,7 @@ bool DisplayMapManager::moveCharacterUp()
 
 bool DisplayMapManager::moveCharacterDown()
 {
-	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+1)) {
+	if (this->map->canMove(this->map->characterPositionMapX, this->map->characterPositionMapY+7)) {
 		this->map->characterPositionMapY += 7;
 		return true;
 	}
