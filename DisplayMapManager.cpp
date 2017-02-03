@@ -5,16 +5,20 @@
 #include "StoneBlock.h"
 #include <SFML/Audio.hpp>
 #include <windows.h>
+#include <string>
 
 DisplayMapManager::DisplayMapManager(Map *map, sf::RenderWindow *window)
 {
 	this->map = map;
 	this->window = window;
 	this->MyFont.loadFromFile("font.ttf");
-	this->text.setPosition(300.f, 300.f);
+	this->text.setFont(this->MyFont);
+	this->text.setPosition(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2);
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(120);
 	this->text.setString("Game Over!");
+	sf::FloatRect textRect = this->text.getLocalBounds();
+	this->text.setOrigin(textRect.width / 2, textRect.height / 2);
 	
 }
 
@@ -42,12 +46,12 @@ void DisplayMapManager::display(int x, int y)
 		this->window->draw(* block->getSprite());
 	}
 
-	if (this->map->characterPositionMapY > 700) {
+	if (this->map->characterPositionMapY >= 700) {
 		this->window->clear(sf::Color::Black);
 		this->window->draw(this->text);
 		this->window->display();
 		
-		Sleep(2000);
+		Sleep(3000);
 		this->map->characterPositionMapX = 25;
 		this->map->characterPositionMapY = 420-97;
 	}
