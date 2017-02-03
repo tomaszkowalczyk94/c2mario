@@ -9,6 +9,8 @@ public:
 	int height = 95;
 	sf::Texture characterTexture;
 	sf::Sprite characterSprite;
+	sf::IntRect rectSourceSprite;
+	sf::FloatRect textRect;
 	int gravityStatus = 0;
 
 };

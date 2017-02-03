@@ -20,6 +20,8 @@ public:
 
 	void display(int x, int y);
 	void textSettings();
+	void animateCharacter();
+	void stopAnimation();
 	bool moveCharacterLeft();
 	bool moveCharacterRight();
 	bool moveCharacterUp();

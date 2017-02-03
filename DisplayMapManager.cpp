@@ -60,16 +60,40 @@ void DisplayMapManager::display(int x, int y)
 		this->map->characterPositionMapY = 420-97;
 	}
 
+	
 
 	this->window->draw(this->map->character.characterSprite);
+	
+}
+
+
+void DisplayMapManager::animateCharacter()
+{
+
+}
+
+void DisplayMapManager::stopAnimation()
+{
+	this->map->character.rectSourceSprite.left = 0;
+	this->map->character.characterSprite.setTextureRect(this->map->character.rectSourceSprite);
 }
 
 bool DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 5, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX += 5;
-		this->map->character.characterSprite.setTextureRect(sf::IntRect(0, 0, this->map->character.width, this->map->character.height));
-		
+		//this->map->character.characterSprite.setTextureRect(sf::IntRect(0, 0, this->map->character.width, this->map->character.height));
+		this->map->character.characterSprite.setScale(1.f, 1.f);
+		this->map->character.characterSprite.setOrigin(0, 0);
+		if (clock.getElapsedTime().asMilliseconds() > 100.f) {
+			if (this->map->character.rectSourceSprite.left == 10 * 75)
+				this->map->character.rectSourceSprite.left = 0;
+			else
+				this->map->character.rectSourceSprite.left += 75;
+
+			this->map->character.characterSprite.setTextureRect(this->map->character.rectSourceSprite);
+		}
+
 		return true;
 	}
 	return false;
@@ -79,7 +103,18 @@ bool DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 5, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX -= 5;
-		this->map->character.characterSprite.setTextureRect(sf::IntRect(this->map->character.width, 0, -(this->map->character.width), this->map->character.height));
+		this->map->character.characterSprite.setScale(-1.f, 1.f);
+		this->map->character.characterSprite.setOrigin(75, 0);
+		if (clock.getElapsedTime().asMilliseconds() > 100.f) {
+			if (this->map->character.rectSourceSprite.left == 10 * 75)
+				this->map->character.rectSourceSprite.left = 0;
+			else
+				this->map->character.rectSourceSprite.left += 75;
+
+			this->map->character.characterSprite.setTextureRect(this->map->character.rectSourceSprite);
+		}
+
+		
 
 		return true;
 	}

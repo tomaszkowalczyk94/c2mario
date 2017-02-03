@@ -37,22 +37,27 @@ int main()
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				window.close();
 		}
+
+			
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
 			displayMapManager.moveCharacterRight();
+			displayMapManager.animateCharacter();
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
 			displayMapManager.moveCharacterLeft();
+			displayMapManager.animateCharacter();
 		}
+		else
+			displayMapManager.stopAnimation();
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
 			gravity.characterJump();
-
 		}
 		else {
 			gravity.stopJump();
