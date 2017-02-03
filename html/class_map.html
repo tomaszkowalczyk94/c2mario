@@ -61,7 +61,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Map Class Reference</div>  </div>
@@ -78,6 +77,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa403fbe09394ccf39747588f5168e3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0db2b7f0c2cc2083da543050f0fa91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9e0db2b7f0c2cc2083da543050f0fa91">canMove</a> (float x, float y)</td></tr>
 <tr class="separator:a9e0db2b7f0c2cc2083da543050f0fa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c8ba4683ce97e3f5120be02b0ace94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a46c8ba4683ce97e3f5120be02b0ace94">getXElemPos</a> (int col)</td></tr>
+<tr class="separator:a46c8ba4683ce97e3f5120be02b0ace94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efab6f1e807cb4cb576fc5dcfed3075"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a8efab6f1e807cb4cb576fc5dcfed3075">getYElemPos</a> (int row)</td></tr>
+<tr class="separator:a8efab6f1e807cb4cb576fc5dcfed3075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -95,15 +98,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa4e4d68c7babc74782b973a3b97431ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad185fe5369037999533e218f3f7ade8a"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="class_abstract_map_block.html">AbstractMapBlock</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad185fe5369037999533e218f3f7ade8a">blockList</a></td></tr>
 <tr class="separator:ad185fe5369037999533e218f3f7ade8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a46c8ba4683ce97e3f5120be02b0ace94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a46c8ba4683ce97e3f5120be02b0ace94">getXElemPos</a> (int col)</td></tr>
-<tr class="separator:a46c8ba4683ce97e3f5120be02b0ace94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8efab6f1e807cb4cb576fc5dcfed3075"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a8efab6f1e807cb4cb576fc5dcfed3075">getYElemPos</a> (int row)</td></tr>
-<tr class="separator:a8efab6f1e807cb4cb576fc5dcfed3075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Reprezentacja mapy w grze. Przechowuje wszyskie bloki jakie istniejan na mapie </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0f5ad0fd4563497b4214038cbca8b582"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f5ad0fd4563497b4214038cbca8b582">&#9670;&nbsp;</a></span>Map()</h2>
 
@@ -118,6 +116,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>konstruktor </p>
 
 </div>
 </div>
@@ -135,6 +134,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destruktor </p>
 
 </div>
 </div>
@@ -164,6 +164,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>sprawdza czy gracz moze sie przesunac do danej wsp mapy. Jesli dla danej wsp istnieje blok na mapie, zwraca false </p>
 
 </div>
 </div>
@@ -172,9 +173,6 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Map::getXElemPos </td>
@@ -184,12 +182,8 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>mapa podzielona jest na kolumny. Zwraca wsp x dla danej kolumny </p>
 
 </div>
 </div>
@@ -198,9 +192,6 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Map::getYElemPos </td>
@@ -210,12 +201,8 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>mapa podzielona jest na wiersze. Zwraca wsp y danego wiersza </p>
 
 </div>
 </div>
@@ -231,6 +218,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>sprite tla mapy </p>
 
 </div>
 </div>
@@ -245,6 +233,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>tekstura tla mapy </p>
 
 </div>
 </div>
@@ -259,6 +248,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>lista wszystkich blokow uzywanych w mapie </p>
 
 </div>
 </div>
@@ -273,6 +263,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Reprezentacja postaci w grze </p>
 
 </div>
 </div>
@@ -287,6 +278,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pozycja x gracza na mapie (zgledem lewego gornego rogu mapy) </p>
 
 </div>
 </div>
@@ -301,6 +293,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pozycja y gracza na mapie (zgledem lewego gornego rogu mapy) </p>
 
 </div>
 </div>
@@ -315,6 +308,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>szerokosc mapy </p>
 
 </div>
 </div>

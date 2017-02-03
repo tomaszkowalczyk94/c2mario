@@ -42,7 +42,10 @@ public:
 	sf::IntRect rectSourceSprite;
 
 	/**
-	*	@todo
+	* status grawitacji gracza. Dostepne sa 3 statusy:
+	* GRAVITY_STATUS_NORMAL = 0,
+    * GRAVITY_STATUS_JUMP = 10,
+    * GRAVITY_STATUS_FALL = 20
 	*/
 	int gravityStatus = 0;
 

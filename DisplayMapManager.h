@@ -11,23 +11,52 @@
 */
 #define WINDOWS_HEIGHT 1080
 
-
+/**
+* zarzadza wyswietlaniem, i poruszaniem sie elementow na mapie
+*/
 class DisplayMapManager
 {
 public:
+	/**
+	* wskaznik na obiekt mapy
+	*/
 	Map *map;
+
+	/**
+	* wskaznik na obiekt okna
+	*/
 	sf::RenderWindow *window;
+
+	/**
+	* wskaznik na obiekt zegara
+	*/
 	sf::Clock clock;
+
+	/**
+	* wskaznik na obiekt czcionki wykorzystywanej w grze
+	*/
 	sf::Font MyFont;
+
+	/**
+	* wskaznik na obiekt tekstu wykorzysywanego w grze
+	*/
 	sf::Text text;
 
+	/**
+	* konstruktor
+	*/
 	DisplayMapManager(Map * map, sf::RenderWindow * window);
+
+	/**
+	* destruktor
+	*/
 	~DisplayMapManager();
 
 	/**
-	*
+	* wyswietla wszystkie elementy na mapie
 	*/
 	void display(int x, int y);
+
 	/**
 	*	Konfiguruje napis który wyswietla sie po przegranej
 	*/
@@ -62,32 +91,32 @@ public:
 protected:
 
 	/**
-	*	@todo
+	*	zwraca pozycje x gracza na ekranie
 	*/
 	float getCharacterWindowX();
 
 	/**
-	*	@todo
+	*	zwraca pozycje y gracza na ekranie
 	*/
 	float getCharacterWindowY();
 
 	/**
-	*	@todo
+	*	konwertuje wsp x mapy, na wsp x okna gry
 	*/
 	float getWindowXPostion(float mapXPostion);
 
 	/**
-	*	@todo
+	*	konwertuje wsp y mapy, na wsp x okna gry
 	*/
 	float getWindowYPostion(float mapYPostion);
 
 	/**
-	*	@todo
+	*	zwraca wsp x tla
 	*/
 	float getBackgroundWindowXPosition(float characterPositionMapX);
 
 	/**
-	*	@todo
+	*	zwraca wsp y tla
 	*/
 	float getBackgroundWindowYPosition(float characterPositionMapY);
 	

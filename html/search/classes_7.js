@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['plankblock',['PlankBlock',['../class_plank_block.html',1,'']]]
+  ['spikesblock',['SpikesBlock',['../class_spikes_block.html',1,'']]],
+  ['stoneblock',['StoneBlock',['../class_stone_block.html',1,'']]]
 ];
