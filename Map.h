@@ -21,7 +21,8 @@ public:
 
 	bool canMove(float x, float y);
 protected:
-	void addMapElem(AbstractMapBlock *mapElem, int x, int y);
+	int getXElemPos(int col);
+	int getYElemPos(int row);
 
 };
 
