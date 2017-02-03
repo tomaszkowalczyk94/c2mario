@@ -1,5 +1,9 @@
 \hypertarget{class_stone_block}{}\section{Stone\+Block Class Reference}
 \label{class_stone_block}\index{Stone\+Block@{Stone\+Block}}
+
+
+{\ttfamily \#include $<$Stone\+Block.\+h$>$}
+
 Inheritance diagram for Stone\+Block\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,25 +13,77 @@ Inheritance diagram for Stone\+Block\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_stone_block_aa2e4adb1d50d9f326ffe427bcdd6d7bb}\label{class_stone_block_aa2e4adb1d50d9f326ffe427bcdd6d7bb}} 
-sf\+::\+Sprite $\ast$ {\bfseries get\+Sprite} ()
+\hyperlink{class_stone_block_ac1118014793321dd453371c33f26aa0f}{Stone\+Block} ()
 \item 
-\mbox{\Hypertarget{class_stone_block_a391e99e613d1864c93647f60c9455a74}\label{class_stone_block_a391e99e613d1864c93647f60c9455a74}} 
-void {\bfseries constructor} ()
+\hyperlink{class_stone_block_a7a44a5fbed028ac94c49c40646477a03}{$\sim$\+Stone\+Block} ()
+\item 
+sf\+::\+Sprite $\ast$ \hyperlink{class_stone_block_aa2e4adb1d50d9f326ffe427bcdd6d7bb}{get\+Sprite} ()
+\item 
+void \hyperlink{class_stone_block_a391e99e613d1864c93647f60c9455a74}{constructor} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_stone_block_a86062896e0fedaad3bedbbd52641f76b}\label{class_stone_block_a86062896e0fedaad3bedbbd52641f76b}} 
-sf\+::\+Texture $\ast$ {\bfseries texture}
+sf\+::\+Texture $\ast$ \hyperlink{class_stone_block_a86062896e0fedaad3bedbbd52641f76b}{texture}
 \item 
-\mbox{\Hypertarget{class_stone_block_a1d66339d3e42126e72130dd6863d30b5}\label{class_stone_block_a1d66339d3e42126e72130dd6863d30b5}} 
-sf\+::\+Sprite $\ast$ {\bfseries sprite}
+sf\+::\+Sprite $\ast$ \hyperlink{class_stone_block_a1d66339d3e42126e72130dd6863d30b5}{sprite}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+Blok reprezentujacy kamien w grze 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stone_block_ac1118014793321dd453371c33f26aa0f}\label{class_stone_block_ac1118014793321dd453371c33f26aa0f}} 
+\index{Stone\+Block@{Stone\+Block}!Stone\+Block@{Stone\+Block}}
+\index{Stone\+Block@{Stone\+Block}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{Stone\+Block()}{StoneBlock()}}
+{\footnotesize\ttfamily Stone\+Block\+::\+Stone\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktr bez parametrow, nie moze byc wywolywany! \mbox{\Hypertarget{class_stone_block_a7a44a5fbed028ac94c49c40646477a03}\label{class_stone_block_a7a44a5fbed028ac94c49c40646477a03}} 
+\index{Stone\+Block@{Stone\+Block}!````~Stone\+Block@{$\sim$\+Stone\+Block}}
+\index{````~Stone\+Block@{$\sim$\+Stone\+Block}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Stone\+Block()}{~StoneBlock()}}
+{\footnotesize\ttfamily Stone\+Block\+::$\sim$\+Stone\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktr, z parametrami x i y danego bloku, wzgledem mapy 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stone_block_a391e99e613d1864c93647f60c9455a74}\label{class_stone_block_a391e99e613d1864c93647f60c9455a74}} 
+\index{Stone\+Block@{Stone\+Block}!constructor@{constructor}}
+\index{constructor@{constructor}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily void Stone\+Block\+::constructor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destruktor \mbox{\Hypertarget{class_stone_block_aa2e4adb1d50d9f326ffe427bcdd6d7bb}\label{class_stone_block_aa2e4adb1d50d9f326ffe427bcdd6d7bb}} 
+\index{Stone\+Block@{Stone\+Block}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{get\+Sprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite $\ast$ Stone\+Block\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+zwraca sprite-\/a 
+
+Implements \hyperlink{class_abstract_map_block_ab5a448a1b6478d10a8814c6d19c4fdb4}{Abstract\+Map\+Block}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_stone_block_a1d66339d3e42126e72130dd6863d30b5}\label{class_stone_block_a1d66339d3e42126e72130dd6863d30b5}} 
+\index{Stone\+Block@{Stone\+Block}!sprite@{sprite}}
+\index{sprite@{sprite}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ Stone\+Block\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sprite danego bloku \mbox{\Hypertarget{class_stone_block_a86062896e0fedaad3bedbbd52641f76b}\label{class_stone_block_a86062896e0fedaad3bedbbd52641f76b}} 
+\index{Stone\+Block@{Stone\+Block}!texture@{texture}}
+\index{texture@{texture}!Stone\+Block@{Stone\+Block}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ Stone\+Block\+::texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tekstura danego bloku 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Stone\+Block.\+h\item 
-Stone\+Block.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_stone_block_8h}{Stone\+Block.\+h}\item 
+\hyperlink{_stone_block_8cpp}{Stone\+Block.\+cpp}\end{DoxyCompactItemize}

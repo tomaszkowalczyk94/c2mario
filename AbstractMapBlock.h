@@ -7,22 +7,50 @@
 class AbstractMapBlock
 {
 public:
-	/*
-	 * Domysny konstruktor, nigdy nie wywo³lywany
-	 */
+
+	/**
+	* Konstruktr bez parametrow, nie moze byc wywolywany!
+	*/
 	AbstractMapBlock();
 
-	
+	/**
+	* Konstruktr, z parametrami x i y danego bloku, wzgledem mapy
+	*/
 	AbstractMapBlock(int x, int y);
+
+	/**
+	* Destruktor
+	*/
 	virtual ~AbstractMapBlock();
 
+	/**
+	* szerokosc obiektu
+	*/
 	int width = 25;
+
+	/**
+	* wysokosc obiektu
+	*/
 	int height = 25;
 
+	/**
+	* wsp x na mapie
+	*/
 	int posX = 0;
+
+	/**
+	* wsp y na mapie
+	*/
 	int posY = 0;
+
+	/**
+	* czy gracz moze przenikac przez blok
+	*/
 	bool isWall = true;
 
+	/**
+	* zwraca sprite-a
+	*/
 	virtual sf::Sprite* getSprite() = 0;
 };
 

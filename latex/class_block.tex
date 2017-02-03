@@ -1,5 +1,9 @@
 \hypertarget{class_block}{}\section{Block Class Reference}
 \label{class_block}\index{Block@{Block}}
+
+
+{\ttfamily \#include $<$Block.\+h$>$}
+
 Inheritance diagram for Block\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,25 +13,77 @@ Inheritance diagram for Block\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_block_a3ff2925a4aa73cb9cabe5097b79f636e}\label{class_block_a3ff2925a4aa73cb9cabe5097b79f636e}} 
-{\bfseries Block} (int x, int y)
+\hyperlink{class_block_a37658a946bf5067ad01d68d9ff086adc}{Block} ()
 \item 
-\mbox{\Hypertarget{class_block_acd9b061af3ad9e79cf49bf9d4dc3d8b9}\label{class_block_acd9b061af3ad9e79cf49bf9d4dc3d8b9}} 
-sf\+::\+Sprite $\ast$ {\bfseries get\+Sprite} ()
+\hyperlink{class_block_a3ff2925a4aa73cb9cabe5097b79f636e}{Block} (int x, int y)
+\item 
+\hyperlink{class_block_a19d1bd0e1cef6a865ed2745a2e648405}{$\sim$\+Block} ()
+\item 
+sf\+::\+Sprite $\ast$ \hyperlink{class_block_acd9b061af3ad9e79cf49bf9d4dc3d8b9}{get\+Sprite} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_block_a61ef2e4fef4ab4a950d3217f88cb8369}\label{class_block_a61ef2e4fef4ab4a950d3217f88cb8369}} 
-sf\+::\+Texture $\ast$ {\bfseries texture}
+sf\+::\+Texture $\ast$ \hyperlink{class_block_a61ef2e4fef4ab4a950d3217f88cb8369}{texture}
 \item 
-\mbox{\Hypertarget{class_block_a5cf88ebac5cc92a309ec3e0d9c9d5fe8}\label{class_block_a5cf88ebac5cc92a309ec3e0d9c9d5fe8}} 
-sf\+::\+Sprite $\ast$ {\bfseries sprite}
+sf\+::\+Sprite $\ast$ \hyperlink{class_block_a5cf88ebac5cc92a309ec3e0d9c9d5fe8}{sprite}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+Blok reprezentujacy zwykly bloczek w grze, nie spelniajacy zadnych specjalnych funkcji 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_block_a37658a946bf5067ad01d68d9ff086adc}\label{class_block_a37658a946bf5067ad01d68d9ff086adc}} 
+\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktr bez parametrow, nie moze byc wywolywany! \mbox{\Hypertarget{class_block_a3ff2925a4aa73cb9cabe5097b79f636e}\label{class_block_a3ff2925a4aa73cb9cabe5097b79f636e}} 
+\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_block_a19d1bd0e1cef6a865ed2745a2e648405}\label{class_block_a19d1bd0e1cef6a865ed2745a2e648405}} 
+\index{Block@{Block}!````~Block@{$\sim$\+Block}}
+\index{````~Block@{$\sim$\+Block}!Block@{Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Block()}{~Block()}}
+{\footnotesize\ttfamily Block\+::$\sim$\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destruktor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_block_acd9b061af3ad9e79cf49bf9d4dc3d8b9}\label{class_block_acd9b061af3ad9e79cf49bf9d4dc3d8b9}} 
+\index{Block@{Block}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Block@{Block}}
+\subsubsection{\texorpdfstring{get\+Sprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite $\ast$ Block\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+zwraca sprite-\/a 
+
+Implements \hyperlink{class_abstract_map_block_ab5a448a1b6478d10a8814c6d19c4fdb4}{Abstract\+Map\+Block}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_block_a5cf88ebac5cc92a309ec3e0d9c9d5fe8}\label{class_block_a5cf88ebac5cc92a309ec3e0d9c9d5fe8}} 
+\index{Block@{Block}!sprite@{sprite}}
+\index{sprite@{sprite}!Block@{Block}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ Block\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sprite danego bloku \mbox{\Hypertarget{class_block_a61ef2e4fef4ab4a950d3217f88cb8369}\label{class_block_a61ef2e4fef4ab4a950d3217f88cb8369}} 
+\index{Block@{Block}!texture@{texture}}
+\index{texture@{texture}!Block@{Block}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ Block\+::texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tekstura danego bloku 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Block.\+h\item 
-Block.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_block_8h}{Block.\+h}\item 
+\hyperlink{_block_8cpp}{Block.\+cpp}\end{DoxyCompactItemize}

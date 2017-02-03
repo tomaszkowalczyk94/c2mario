@@ -7,6 +7,9 @@ Block::Block()
 
 }
 
+/*
+* Konstruktr, z parametrami x i y danego bloku, wzgledem mapy
+*/
 Block::Block(int x, int y)
 {
 	this->posX = x;

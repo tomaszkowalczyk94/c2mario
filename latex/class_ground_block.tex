@@ -1,5 +1,9 @@
 \hypertarget{class_ground_block}{}\section{Ground\+Block Class Reference}
 \label{class_ground_block}\index{Ground\+Block@{Ground\+Block}}
+
+
+{\ttfamily \#include $<$Ground\+Block.\+h$>$}
+
 Inheritance diagram for Ground\+Block\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,25 +13,77 @@ Inheritance diagram for Ground\+Block\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_ground_block_a0155a6938214c2752002828b9e26da0a}\label{class_ground_block_a0155a6938214c2752002828b9e26da0a}} 
-{\bfseries Ground\+Block} (int x, int y)
+\hyperlink{class_ground_block_adb573a253a45cd9ee4d2c2b51dadcd87}{Ground\+Block} ()
 \item 
-\mbox{\Hypertarget{class_ground_block_a73c0f8ff59ef53b18f03bc3f22f8f810}\label{class_ground_block_a73c0f8ff59ef53b18f03bc3f22f8f810}} 
-sf\+::\+Sprite $\ast$ {\bfseries get\+Sprite} ()
+\hyperlink{class_ground_block_a0155a6938214c2752002828b9e26da0a}{Ground\+Block} (int x, int y)
+\item 
+\hyperlink{class_ground_block_a2f81acbda3a2b1c4a901a59de60124d0}{$\sim$\+Ground\+Block} ()
+\item 
+sf\+::\+Sprite $\ast$ \hyperlink{class_ground_block_a73c0f8ff59ef53b18f03bc3f22f8f810}{get\+Sprite} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_ground_block_af610cda7ad96e934524a7bbdc13a64d6}\label{class_ground_block_af610cda7ad96e934524a7bbdc13a64d6}} 
-sf\+::\+Texture $\ast$ {\bfseries texture}
+sf\+::\+Texture $\ast$ \hyperlink{class_ground_block_af610cda7ad96e934524a7bbdc13a64d6}{texture}
 \item 
-\mbox{\Hypertarget{class_ground_block_a235135fde9ffb53700b4bee134175dda}\label{class_ground_block_a235135fde9ffb53700b4bee134175dda}} 
-sf\+::\+Sprite $\ast$ {\bfseries sprite}
+sf\+::\+Sprite $\ast$ \hyperlink{class_ground_block_a235135fde9ffb53700b4bee134175dda}{sprite}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+Blok reprezentujacy ziemie z trawa w grze 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ground_block_adb573a253a45cd9ee4d2c2b51dadcd87}\label{class_ground_block_adb573a253a45cd9ee4d2c2b51dadcd87}} 
+\index{Ground\+Block@{Ground\+Block}!Ground\+Block@{Ground\+Block}}
+\index{Ground\+Block@{Ground\+Block}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{Ground\+Block()}{GroundBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ground\+Block\+::\+Ground\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktr bez parametrow, nie moze byc wywolywany! \mbox{\Hypertarget{class_ground_block_a0155a6938214c2752002828b9e26da0a}\label{class_ground_block_a0155a6938214c2752002828b9e26da0a}} 
+\index{Ground\+Block@{Ground\+Block}!Ground\+Block@{Ground\+Block}}
+\index{Ground\+Block@{Ground\+Block}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{Ground\+Block()}{GroundBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ground\+Block\+::\+Ground\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Konstruktr, z parametrami x i y danego bloku, wzgledem mapy \mbox{\Hypertarget{class_ground_block_a2f81acbda3a2b1c4a901a59de60124d0}\label{class_ground_block_a2f81acbda3a2b1c4a901a59de60124d0}} 
+\index{Ground\+Block@{Ground\+Block}!````~Ground\+Block@{$\sim$\+Ground\+Block}}
+\index{````~Ground\+Block@{$\sim$\+Ground\+Block}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Ground\+Block()}{~GroundBlock()}}
+{\footnotesize\ttfamily Ground\+Block\+::$\sim$\+Ground\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destruktor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ground_block_a73c0f8ff59ef53b18f03bc3f22f8f810}\label{class_ground_block_a73c0f8ff59ef53b18f03bc3f22f8f810}} 
+\index{Ground\+Block@{Ground\+Block}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{get\+Sprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite $\ast$ Ground\+Block\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+zwraca sprite-\/a 
+
+Implements \hyperlink{class_abstract_map_block_ab5a448a1b6478d10a8814c6d19c4fdb4}{Abstract\+Map\+Block}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ground_block_a235135fde9ffb53700b4bee134175dda}\label{class_ground_block_a235135fde9ffb53700b4bee134175dda}} 
+\index{Ground\+Block@{Ground\+Block}!sprite@{sprite}}
+\index{sprite@{sprite}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ Ground\+Block\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sprite danego bloku \mbox{\Hypertarget{class_ground_block_af610cda7ad96e934524a7bbdc13a64d6}\label{class_ground_block_af610cda7ad96e934524a7bbdc13a64d6}} 
+\index{Ground\+Block@{Ground\+Block}!texture@{texture}}
+\index{texture@{texture}!Ground\+Block@{Ground\+Block}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ Ground\+Block\+::texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tekstura danego bloku 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Ground\+Block.\+h\item 
-Ground\+Block.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_ground_block_8h}{Ground\+Block.\+h}\item 
+\hyperlink{_ground_block_8cpp}{Ground\+Block.\+cpp}\end{DoxyCompactItemize}
