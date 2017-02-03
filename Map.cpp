@@ -67,7 +67,7 @@ Map::~Map()
 bool Map::canMove(float x, float y)
 {
 	for (AbstractMapBlock *block : this->blockList) {
-		if (!(x > block->posX + block->width || x + this->character.width < block->posX || y > block->posY + block->height || y + this->character.height < block->posY)) {
+		if (!(x+15 > block->posX + block->width || x-15 + this->character.width < block->posX || y > block->posY + block->height || y + this->character.height < block->posY)) {
 			return false;
 		}		
 	}
