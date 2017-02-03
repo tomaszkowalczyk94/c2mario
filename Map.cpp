@@ -11,6 +11,8 @@
 #include "BushBlock.h"
 #include <iostream>
 
+
+
 Map::Map()
 {
 	this->backgroundTexture.loadFromFile("background.png");
@@ -95,7 +97,7 @@ Map::Map()
 
 	// -- kolce
 	int yKolcow = 800;
-	for (int x = -10; x < 40; x++) 
+	for (int x = -20; x < 50; x++) 
 	{
 		this->blockList.push_front(new SpikesBlock(this->getXElemPos(x), yKolcow));
 	}

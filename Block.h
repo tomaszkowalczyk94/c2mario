@@ -5,6 +5,10 @@ class Block :
 {
 public:
 	Block();
+
+	/*
+	* Konstruktr, z parametrami x i y danego bloku, wzgledem mapy
+	*/
 	Block(int x, int y);
 	~Block();
 

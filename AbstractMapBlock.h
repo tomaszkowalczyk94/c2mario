@@ -1,10 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+/**
+ * Abstrakcyjna klasa bloku, po ktorej dziedzicza wszystkie mozliwe elementy ktore mozna umiescic na mapie
+*/
 class AbstractMapBlock
 {
 public:
+	/*
+	 * Domysny konstruktor, nigdy nie wywo³lywany
+	 */
 	AbstractMapBlock();
+
+	
 	AbstractMapBlock(int x, int y);
 	virtual ~AbstractMapBlock();
 
