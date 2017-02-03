@@ -20,7 +20,7 @@ public:
 	std::list<AbstractMapBlock *> blockList;
 
 	bool canMove(float x, float y);
-protected:
+public:
 	int getXElemPos(int col);
 	int getYElemPos(int row);
 
