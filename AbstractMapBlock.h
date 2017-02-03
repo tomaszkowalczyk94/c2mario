@@ -5,6 +5,7 @@ class AbstractMapBlock
 {
 public:
 	AbstractMapBlock();
+	AbstractMapBlock(int x, int y);
 	virtual ~AbstractMapBlock();
 
 	int width = 25;
@@ -14,6 +15,5 @@ public:
 	int posY = 0;
 
 	virtual sf::Sprite* getSprite() = 0;
-	virtual void constructor() = 0;
 };
 

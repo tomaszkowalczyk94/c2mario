@@ -6,10 +6,10 @@ class GroundBlock :
 {
 public:
 	GroundBlock();
+	GroundBlock(int x, int y);
 	~GroundBlock();
 
 	sf::Sprite* getSprite();
-	void constructor();
 
 protected:
 	sf::Texture *texture;

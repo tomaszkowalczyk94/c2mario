@@ -5,10 +5,10 @@ class Block :
 {
 public:
 	Block();
+	Block(int x, int y);
 	~Block();
 
 	sf::Sprite* getSprite();
-	void constructor();
 protected:
 	sf::Texture *texture;
 	sf::Sprite *sprite;

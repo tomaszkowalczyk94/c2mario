@@ -4,7 +4,22 @@
 
 GroundBlock::GroundBlock()
 {
-	this->constructor();
+
+}
+
+GroundBlock::GroundBlock(int x, int y)
+{
+	this->posX = x;
+	this->posY = y;
+
+	this->texture = new sf::Texture;
+	this->texture->loadFromFile("img/ground.png");
+
+	this->sprite = new sf::Sprite;
+	this->sprite->setTexture(*this->texture);
+
+	this->width = 70;
+	this->height = 70;
 }
 
 
@@ -15,17 +30,5 @@ GroundBlock::~GroundBlock()
 sf::Sprite* GroundBlock::getSprite()
 {
 	return this->sprite;
-}
-
-void GroundBlock::constructor()
-{
-	this->texture = new sf::Texture;
-	this->texture->loadFromFile("img/ground.png");
-
-	this->sprite = new sf::Sprite;
-	this->sprite->setTexture(*this->texture);
-
-	this->width = 70;
-	this->height = 70;
 }
 

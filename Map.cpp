@@ -16,22 +16,20 @@ Map::Map()
 	this->characterPositionMapY = 420-97;
 
 
-	Block *block = new Block;
-	GroundBlock *groundBlock = new GroundBlock;
+	GroundBlock *groundBlock1 = new GroundBlock(25, 615); this->blockList.push_front(groundBlock1);
+	Block *block1 = new Block(25, 685); this->blockList.push_front(block1);
 
-	this->addMapElem(groundBlock, 25, 615);
-	this->addMapElem(block, 25, 685);
+	GroundBlock *groundBlock2 = new GroundBlock(95, 615); this->blockList.push_front(groundBlock2);
+	Block *block2 = new Block(95, 685); this->blockList.push_front(block2);
 
-	this->addMapElem(groundBlock, 95, 615);
-	this->addMapElem(block, 95, 685);
+	GroundBlock *groundBlock3 = new GroundBlock(165, 615); this->blockList.push_front(groundBlock3);
+	Block *block3 = new Block(165, 685); this->blockList.push_front(block3);
 
-	this->addMapElem(groundBlock, 165, 615);
-	this->addMapElem(block, 165, 685);
+	GroundBlock *groundBlock6 = new GroundBlock(430, 685); this->blockList.push_front(groundBlock6);
 
-	this->addMapElem(groundBlock, 430, 685);
-
-	this->addMapElem(groundBlock, 500, 615);
-	this->addMapElem(block, 500, 685);
+	GroundBlock *groundBlock7 = new GroundBlock(500, 615); this->blockList.push_front(groundBlock7);
+	Block *block7 = new Block(500, 685); this->blockList.push_front(block7);
+	
 }
 
 
@@ -50,16 +48,4 @@ bool Map::canMove(float x, float y)
 	}
 
 	return true;
-}
-
-void Map::addMapElem(AbstractMapBlock *mapElem, int x, int y)
-{
-	AbstractMapBlock* newBlock = (AbstractMapBlock*) malloc (sizeof AbstractMapBlock);
-	memcpy(newBlock, mapElem, sizeof AbstractMapBlock);
-
-	newBlock->constructor();
-	newBlock->posX = x;
-	newBlock->posY = y;
-	
-	this->blockList.push_front(newBlock);
 }
