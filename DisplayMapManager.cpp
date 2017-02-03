@@ -27,7 +27,8 @@ void DisplayMapManager::textSettings()
 	this->text.setCharacterSize(120);
 	this->text.setString("Game Over!");
 	sf::FloatRect textRect = this->text.getLocalBounds();
-	this->text.setOrigin(textRect.width / 2, textRect.height / 2);
+	this->text.setOrigin(textRect.width / 4, textRect.height / 4);
+	
 }
 
 void DisplayMapManager::display(int x, int y)
@@ -52,12 +53,26 @@ void DisplayMapManager::display(int x, int y)
 
 	if (this->map->characterPositionMapY >= 700) {
 		this->window->clear(sf::Color::Black);
+		this->text.setString("Game Over!");
+		this->text.setFillColor(sf::Color::Red);
 		this->window->draw(this->text);
 		this->window->display();
 		
 		Sleep(3000);
 		this->map->characterPositionMapX = 25;
 		this->map->characterPositionMapY = 420-97;
+	}
+
+	if (this->map->characterPositionMapX >= this->map->getXElemPos(27)) {
+		this->window->clear(sf::Color::Black);
+		this->text.setString("Win!");
+		this->text.setFillColor(sf::Color::Green);
+		this->window->draw(this->text);
+		this->window->display();
+
+		Sleep(3000);
+		this->map->characterPositionMapX = 25;
+		this->map->characterPositionMapY = 420 - 97;
 	}
 
 	
