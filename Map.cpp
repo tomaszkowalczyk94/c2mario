@@ -5,6 +5,7 @@
 #include "Block.h"
 #include "GroundBlock.h"
 #include "PlankBlock.h"
+#include "BridgeBlock.h"
 #include <iostream>
 
 Map::Map()
@@ -48,9 +49,12 @@ Map::Map()
 	Block *block10c = new Block(this->getXElemPos(10), 615); this->blockList.push_front(block10c);
 	Block *block10 = new Block(this->getXElemPos(10), 685); this->blockList.push_front(block10);
 
-	PlankBlock *plankBlock12 = new PlankBlock(this->getXElemPos(12), 405); this->blockList.push_front(plankBlock12);
+	PlankBlock *plankBlock13 = new PlankBlock(this->getXElemPos(13), this->getYElemPos(4)); this->blockList.push_front(plankBlock13);
+	PlankBlock *plankBlock14 = new PlankBlock(this->getXElemPos(14), this->getYElemPos(4)); this->blockList.push_front(plankBlock14);
+	BridgeBlock *bridgeBlock14 = new BridgeBlock( this->getXElemPos(14), this->getYElemPos(0) ); this->blockList.push_front(bridgeBlock14);
 
-
+	PlankBlock *plankBlock15 = new PlankBlock(this->getXElemPos(15), this->getYElemPos(4)); this->blockList.push_front(plankBlock15);
+	BridgeBlock *bridgeBlock15 = new BridgeBlock(this->getXElemPos(15), this->getYElemPos(0)); this->blockList.push_front(bridgeBlock15);
 }
 
 
