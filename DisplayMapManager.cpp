@@ -63,7 +63,6 @@ void DisplayMapManager::display(int x, int y)
 	
 
 	this->window->draw(this->map->character.characterSprite);
-	
 }
 
 
@@ -85,14 +84,18 @@ bool DisplayMapManager::moveCharacterRight()
 		//this->map->character.characterSprite.setTextureRect(sf::IntRect(0, 0, this->map->character.width, this->map->character.height));
 		this->map->character.characterSprite.setScale(1.f, 1.f);
 		this->map->character.characterSprite.setOrigin(0, 0);
-		if (clock.getElapsedTime().asMilliseconds() > 100.f) {
+
+		if (this->clock.getElapsedTime().asMilliseconds() > 25.f) {
 			if (this->map->character.rectSourceSprite.left == 10 * 75)
 				this->map->character.rectSourceSprite.left = 0;
 			else
 				this->map->character.rectSourceSprite.left += 75;
 
 			this->map->character.characterSprite.setTextureRect(this->map->character.rectSourceSprite);
+			this->clock.restart();
+			
 		}
+		
 
 		return true;
 	}
@@ -105,15 +108,16 @@ bool DisplayMapManager::moveCharacterLeft()
 		this->map->characterPositionMapX -= 5;
 		this->map->character.characterSprite.setScale(-1.f, 1.f);
 		this->map->character.characterSprite.setOrigin(75, 0);
-		if (clock.getElapsedTime().asMilliseconds() > 100.f) {
+
+		if (this->clock.getElapsedTime().asMilliseconds() > 25.f) {
 			if (this->map->character.rectSourceSprite.left == 10 * 75)
 				this->map->character.rectSourceSprite.left = 0;
 			else
 				this->map->character.rectSourceSprite.left += 75;
 
 			this->map->character.characterSprite.setTextureRect(this->map->character.rectSourceSprite);
+			this->clock.restart();
 		}
-
 		
 
 		return true;

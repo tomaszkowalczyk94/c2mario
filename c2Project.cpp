@@ -57,7 +57,7 @@ int main()
 			displayMapManager.stopAnimation();
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
-			gravity.characterJump();
+			gravity.characterJump();			
 		}
 		else {
 			gravity.stopJump();
