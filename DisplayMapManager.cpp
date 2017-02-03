@@ -55,7 +55,6 @@ bool DisplayMapManager::moveCharacterRight()
 		this->map->characterPositionMapX += 5;
 		this->map->character.characterSprite.setTextureRect(sf::IntRect(0, 0, this->map->character.width, this->map->character.height));
 		
-		
 		return true;
 	}
 	return false;

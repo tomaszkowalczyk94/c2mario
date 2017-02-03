@@ -13,7 +13,7 @@ Block::Block(int x, int y)
 	this->posY = y;
 
 	this->texture = new sf::Texture;
-	this->texture->loadFromFile("img/block.png");
+	this->texture->loadFromFile("img/ground_dirt.png");
 
 	this->sprite = new sf::Sprite;
 	this->sprite->setTexture(*this->texture);
