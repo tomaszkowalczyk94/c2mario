@@ -13,7 +13,7 @@ public:
 	sf::RenderWindow *window;
 	sf::Clock clock;
 	sf::Font MyFont;
-	sf::String text;
+	sf::Text text;
 
 	DisplayMapManager(Map * map, sf::RenderWindow * window);
 	~DisplayMapManager();

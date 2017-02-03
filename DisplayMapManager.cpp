@@ -11,6 +11,11 @@ DisplayMapManager::DisplayMapManager(Map *map, sf::RenderWindow *window)
 	this->map = map;
 	this->window = window;
 	this->MyFont.loadFromFile("font.ttf");
+	this->text.setPosition(300.f, 300.f);
+	this->text.setFillColor(sf::Color::Red);
+	this->text.setCharacterSize(120);
+	this->text.setString("Game Over!");
+	
 }
 
 DisplayMapManager::~DisplayMapManager()
@@ -39,7 +44,9 @@ void DisplayMapManager::display(int x, int y)
 
 	if (this->map->characterPositionMapY > 700) {
 		this->window->clear(sf::Color::Black);
+		this->window->draw(this->text);
 		this->window->display();
+		
 		Sleep(2000);
 		this->map->characterPositionMapX = 25;
 		this->map->characterPositionMapY = 420-97;
