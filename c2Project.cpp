@@ -46,12 +46,10 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
 			displayMapManager.moveCharacterRight();
-			displayMapManager.animateCharacter();
 		}
 		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
 			displayMapManager.moveCharacterLeft();
-			displayMapManager.animateCharacter();
 		}
 		else
 			displayMapManager.stopAnimation();

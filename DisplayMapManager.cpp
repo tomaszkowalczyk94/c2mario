@@ -65,12 +65,6 @@ void DisplayMapManager::display(int x, int y)
 	this->window->draw(this->map->character.characterSprite);
 }
 
-
-void DisplayMapManager::animateCharacter()
-{
-
-}
-
 void DisplayMapManager::stopAnimation()
 {
 	this->map->character.rectSourceSprite.left = 0;
