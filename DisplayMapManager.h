@@ -4,12 +4,12 @@
 /**
 *	Szerokosc okna gry
 */
-#define WINDOWS_WIDTH 1280
+#define WINDOWS_WIDTH 1920
 
 /**
 *	Wysokosc okna gry
 */
-#define WINDOWS_HEIGHT 720
+#define WINDOWS_HEIGHT 1080
 
 /**
 * zarzadza wyswietlaniem, i poruszaniem sie elementow na mapie
