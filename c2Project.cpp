@@ -43,11 +43,11 @@ int main()
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
-			displayMapManager.moveCharacterLeft();
+			displayMapManager.moveCharacterRight();
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
-			displayMapManager.moveCharacterRight();
+			displayMapManager.moveCharacterLeft();
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{

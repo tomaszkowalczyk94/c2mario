@@ -49,7 +49,7 @@ void DisplayMapManager::display(int x, int y)
 	this->window->draw(this->map->character.characterSprite);
 }
 
-bool DisplayMapManager::moveCharacterLeft()
+bool DisplayMapManager::moveCharacterRight()
 {
 	if (this->map->canMove(this->map->characterPositionMapX + 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX += 5;
@@ -61,7 +61,7 @@ bool DisplayMapManager::moveCharacterLeft()
 	return false;
 }
 
-bool DisplayMapManager::moveCharacterRight()
+bool DisplayMapManager::moveCharacterLeft()
 {
 	if (this->map->canMove(this->map->characterPositionMapX - 1, this->map->characterPositionMapY)) {
 		this->map->characterPositionMapX -= 5;
