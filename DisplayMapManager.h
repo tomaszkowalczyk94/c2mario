@@ -2,8 +2,8 @@
 #include <SFML/Graphics.hpp>
 
 
-#define WINDOWS_WIDTH 1280
-#define WINDOWS_HEIGHT 720
+#define WINDOWS_WIDTH 1920
+#define WINDOWS_HEIGHT 1080
 
 
 class DisplayMapManager
