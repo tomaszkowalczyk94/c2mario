@@ -13,6 +13,7 @@ public:
 
 	int posX = 0;
 	int posY = 0;
+	bool isWall = true;
 
 	virtual sf::Sprite* getSprite() = 0;
 };

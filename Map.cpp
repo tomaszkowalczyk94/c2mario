@@ -8,6 +8,7 @@
 #include "BridgeBlock.h"
 #include "CrateBlock.h"
 #include "SpikesBlock.h"
+#include "BushBlock.h"
 #include <iostream>
 
 Map::Map()
@@ -26,6 +27,8 @@ Map::Map()
 
 	GroundBlock *groundBlock1 = new GroundBlock(this->getXElemPos(1), 615); this->blockList.push_front(groundBlock1);
 	Block *block1 = new Block(this->getXElemPos(1), 685); this->blockList.push_front(block1);
+	BushBlock *bushBlock1 = new BushBlock(this->getXElemPos(1), 589); this->blockList.push_front(bushBlock1);
+
 
 	GroundBlock *groundBlock2 = new GroundBlock(this->getXElemPos(2), 615); this->blockList.push_front(groundBlock2);
 	Block *block3 = new Block(this->getXElemPos(2), 685); this->blockList.push_front(block3);
@@ -109,7 +112,7 @@ Map::~Map()
 bool Map::canMove(float x, float y)
 {
 	for (AbstractMapBlock *block : this->blockList) {
-		if (!(x+15 > block->posX + block->width || x-15 + this->character.width < block->posX || y > block->posY + block->height || y + this->character.height < block->posY)) {
+		if (block->isWall &&  !(x+15 > block->posX + block->width || x-15 + this->character.width < block->posX || y > block->posY + block->height || y + this->character.height < block->posY)) {
 			return false;
 		}		
 	}
