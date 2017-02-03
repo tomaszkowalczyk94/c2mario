@@ -11,19 +11,23 @@ DisplayMapManager::DisplayMapManager(Map *map, sf::RenderWindow *window)
 {
 	this->map = map;
 	this->window = window;
+	this->textSettings();
+}
+
+DisplayMapManager::~DisplayMapManager()
+{
+}
+
+void DisplayMapManager::textSettings() 
+{
 	this->MyFont.loadFromFile("font.ttf");
 	this->text.setFont(this->MyFont);
-	this->text.setPosition(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2);
+	this->text.setPosition(WINDOWS_WIDTH / 2, WINDOWS_HEIGHT / 2);
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(120);
 	this->text.setString("Game Over!");
 	sf::FloatRect textRect = this->text.getLocalBounds();
 	this->text.setOrigin(textRect.width / 2, textRect.height / 2);
-	
-}
-
-DisplayMapManager::~DisplayMapManager()
-{
 }
 
 void DisplayMapManager::display(int x, int y)

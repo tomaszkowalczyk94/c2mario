@@ -19,6 +19,7 @@ public:
 	~DisplayMapManager();
 
 	void display(int x, int y);
+	void textSettings();
 	bool moveCharacterLeft();
 	bool moveCharacterRight();
 	bool moveCharacterUp();
