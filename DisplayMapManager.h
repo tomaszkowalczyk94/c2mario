@@ -12,6 +12,8 @@ public:
 	Map *map;
 	sf::RenderWindow *window;
 	sf::Clock clock;
+	sf::Font MyFont;
+	sf::String text;
 
 	DisplayMapManager(Map * map, sf::RenderWindow * window);
 	~DisplayMapManager();

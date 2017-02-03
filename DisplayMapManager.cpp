@@ -4,11 +4,13 @@
 #include <SFML/Graphics.hpp>
 #include "StoneBlock.h"
 #include <SFML/Audio.hpp>
+#include <windows.h>
 
 DisplayMapManager::DisplayMapManager(Map *map, sf::RenderWindow *window)
 {
 	this->map = map;
 	this->window = window;
+	this->MyFont.loadFromFile("font.ttf");
 }
 
 DisplayMapManager::~DisplayMapManager()
@@ -34,6 +36,16 @@ void DisplayMapManager::display(int x, int y)
 
 		this->window->draw(* block->getSprite());
 	}
+
+	if (this->map->characterPositionMapY > 700) {
+		this->window->clear(sf::Color::Black);
+		this->window->display();
+		Sleep(2000);
+		this->map->characterPositionMapX = 25;
+		this->map->characterPositionMapY = 420-97;
+	}
+
+
 	this->window->draw(this->map->character.characterSprite);
 }
 
