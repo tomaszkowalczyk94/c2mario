@@ -63,7 +63,7 @@ void DisplayMapManager::display(int x, int y)
 		this->map->characterPositionMapY = 420-97;
 	}
 
-	if (this->map->characterPositionMapX >= this->map->getXElemPos(27)) {
+	if (this->map->characterPositionMapX >= this->map->getXElemPos(26)) {
 		this->window->clear(sf::Color::Black);
 		this->text.setString("Win!");
 		this->text.setFillColor(sf::Color::Green);

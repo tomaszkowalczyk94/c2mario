@@ -10,20 +10,21 @@ class StoneBlock :
 {
 public:
 
+	StoneBlock();
 	/**
 	* Konstruktr bez parametrow, nie moze byc wywolywany!
 	*/
-	StoneBlock();
+	StoneBlock(int x, int y);
 
 	/**
-	* Konstruktr, z parametrami x i y danego bloku, wzgledem mapy
+	* Destruktor
 	*/
 	~StoneBlock();
 
 	sf::Sprite* getSprite();
 
 	/**
-	* Destruktor
+	* Konstruktr, z parametrami x i y danego bloku, wzgledem mapy
 	*/
 	void constructor();
 

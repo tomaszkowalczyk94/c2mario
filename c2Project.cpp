@@ -8,7 +8,7 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(WINDOWS_WIDTH, WINDOWS_HEIGHT), "C2projekt", sf::Style::Fullscreen);
+	sf::RenderWindow window(sf::VideoMode(WINDOWS_WIDTH, WINDOWS_HEIGHT), "C2projekt");
 	window.setVerticalSyncEnabled(true);
 	window.setFramerateLimit(60);
 

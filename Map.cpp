@@ -93,6 +93,8 @@ Map::Map()
 
 	BridgeBlock *bridgeBlock27 = new BridgeBlock(this->getXElemPos(27), this->getYElemPos(0)); this->blockList.push_front(bridgeBlock27);
 
+	StoneBlock *stoneBlock1 = new StoneBlock(this->getXElemPos(27), this->getYElemPos(1)); this->blockList.push_front(stoneBlock1);
+
 
 
 	// -- kolce

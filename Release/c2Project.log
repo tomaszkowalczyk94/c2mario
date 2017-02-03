@@ -1,0 +1,24 @@
+﻿  stdafx.cpp
+  AbstractMapBlock.cpp
+  Block.cpp
+  BridgeBlock.cpp
+  BushBlock.cpp
+  c2Project.cpp
+c2Project.cpp(69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Character.cpp
+  CrateBlock.cpp
+  DisplayMapManager.cpp
+DisplayMapManager.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+DisplayMapManager.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+DisplayMapManager.cpp(164): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Gravity.cpp
+  GroundBlock.cpp
+  Map.cpp
+  PlankBlock.cpp
+  SpikesBlock.cpp
+  StoneBlock.cpp
+  Generating code
+  All 228 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  c2Project.vcxproj -> C:\Users\Dominik Klarkowski\Documents\GitHub\c2mario\Release\c2Project.exe
+  c2Project.vcxproj -> C:\Users\Dominik Klarkowski\Documents\GitHub\c2mario\Release\c2Project.pdb (Full PDB)

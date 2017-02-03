@@ -4,12 +4,12 @@
 /**
 *	Szerokosc okna gry
 */
-#define WINDOWS_WIDTH 1920
+#define WINDOWS_WIDTH 1280
 
 /**
 *	Wysokosc okna gry
 */
-#define WINDOWS_HEIGHT 1080
+#define WINDOWS_HEIGHT 720
 
 
 class DisplayMapManager

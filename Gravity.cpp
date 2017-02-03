@@ -16,6 +16,7 @@ Gravity::~Gravity()
 
 void Gravity::interactGravity()
 {
+
 	Character *character = &this->displayMapManager->map->character;
 	Map *map = this->displayMapManager->map;
 

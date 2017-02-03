@@ -3,30 +3,29 @@
 #include "StoneBlock.h"
 #include <SFML/Graphics.hpp>
 
-StoneBlock::StoneBlock()
-{
-	this->constructor();
-}
 
-
-StoneBlock::~StoneBlock()
+StoneBlock::StoneBlock(int x, int y)
 {
-	
-}
+	this->posX = x;
+	this->posY = y;
+	this->isWall = false;
 
-sf::Sprite* StoneBlock::getSprite()
-{
-	return this->sprite;
-}
-
-void StoneBlock::constructor()
-{
 	this->texture = new sf::Texture;
-	this->texture->loadFromFile("stoneBlock.png");
+	this->texture->loadFromFile("img/key_yellow.png");
 
 	this->sprite = new sf::Sprite;
 	this->sprite->setTexture(*this->texture);
 
 	this->width = 70;
-	this->height = 70;
+	this->height = 24;
+}
+
+
+StoneBlock::~StoneBlock()
+{
+}
+
+sf::Sprite * StoneBlock::getSprite()
+{
+	return this->sprite;
 }
