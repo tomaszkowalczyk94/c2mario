@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hud',['HUD',['../class_h_u_d.html',1,'']]]
+  ['map',['Map',['../class_map.html',1,'']]]
 ];

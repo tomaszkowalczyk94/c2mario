@@ -12,6 +12,10 @@
 \hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()
 \item 
 bool \hyperlink{class_map_a9e0db2b7f0c2cc2083da543050f0fa91}{can\+Move} (float x, float y)
+\item 
+int \hyperlink{class_map_a46c8ba4683ce97e3f5120be02b0ace94}{get\+X\+Elem\+Pos} (int col)
+\item 
+int \hyperlink{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}{get\+Y\+Elem\+Pos} (int row)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -30,14 +34,10 @@ float \hyperlink{class_map_aa4e4d68c7babc74782b973a3b97431ea}{character\+Positio
 \item 
 std\+::list$<$ \hyperlink{class_abstract_map_block}{Abstract\+Map\+Block} $\ast$ $>$ \hyperlink{class_map_ad185fe5369037999533e218f3f7ade8a}{block\+List}
 \end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-int \hyperlink{class_map_a46c8ba4683ce97e3f5120be02b0ace94}{get\+X\+Elem\+Pos} (int col)
-\item 
-int \hyperlink{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}{get\+Y\+Elem\+Pos} (int row)
-\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Reprezentacja mapy w grze. Przechowuje wszyskie bloki jakie istniejan na mapie 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\label{class_map_a0f5ad0fd4563497b4214038cbca8b582}} 
@@ -46,13 +46,13 @@ int \hyperlink{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}{get\+Y\+Elem\+Pos} (
 \subsubsection{\texorpdfstring{Map()}{Map()}}
 {\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+konstruktor \mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
 \index{Map@{Map}!````~Map@{$\sim$\+Map}}
 \index{````~Map@{$\sim$\+Map}!Map@{Map}}
 \subsubsection{\texorpdfstring{$\sim$\+Map()}{~Map()}}
 {\footnotesize\ttfamily Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+destruktor 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_map_a9e0db2b7f0c2cc2083da543050f0fa91}\label{class_map_a9e0db2b7f0c2cc2083da543050f0fa91}} 
@@ -61,19 +61,19 @@ int \hyperlink{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}{get\+Y\+Elem\+Pos} (
 \subsubsection{\texorpdfstring{can\+Move()}{canMove()}}
 {\footnotesize\ttfamily bool Map\+::can\+Move (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_map_a46c8ba4683ce97e3f5120be02b0ace94}\label{class_map_a46c8ba4683ce97e3f5120be02b0ace94}} 
+sprawdza czy gracz moze sie przesunac do danej wsp mapy. Jesli dla danej wsp istnieje blok na mapie, zwraca false \mbox{\Hypertarget{class_map_a46c8ba4683ce97e3f5120be02b0ace94}\label{class_map_a46c8ba4683ce97e3f5120be02b0ace94}} 
 \index{Map@{Map}!get\+X\+Elem\+Pos@{get\+X\+Elem\+Pos}}
 \index{get\+X\+Elem\+Pos@{get\+X\+Elem\+Pos}!Map@{Map}}
 \subsubsection{\texorpdfstring{get\+X\+Elem\+Pos()}{getXElemPos()}}
-{\footnotesize\ttfamily int Map\+::get\+X\+Elem\+Pos (\begin{DoxyParamCaption}\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily int Map\+::get\+X\+Elem\+Pos (\begin{DoxyParamCaption}\item[{int}]{col }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}\label{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}} 
+mapa podzielona jest na kolumny. Zwraca wsp x dla danej kolumny \mbox{\Hypertarget{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}\label{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}} 
 \index{Map@{Map}!get\+Y\+Elem\+Pos@{get\+Y\+Elem\+Pos}}
 \index{get\+Y\+Elem\+Pos@{get\+Y\+Elem\+Pos}!Map@{Map}}
 \subsubsection{\texorpdfstring{get\+Y\+Elem\+Pos()}{getYElemPos()}}
-{\footnotesize\ttfamily int Map\+::get\+Y\+Elem\+Pos (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily int Map\+::get\+Y\+Elem\+Pos (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
 
-
+mapa podzielona jest na wiersze. Zwraca wsp y danego wiersza 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_map_aa92b0ecd899641e3385613efcd037f65}\label{class_map_aa92b0ecd899641e3385613efcd037f65}} 
@@ -82,43 +82,43 @@ int \hyperlink{class_map_a8efab6f1e807cb4cb576fc5dcfed3075}{get\+Y\+Elem\+Pos} (
 \subsubsection{\texorpdfstring{background\+Sprite}{backgroundSprite}}
 {\footnotesize\ttfamily sf\+::\+Sprite Map\+::background\+Sprite}
 
-\mbox{\Hypertarget{class_map_a18202f9ebc5ddab14652bdacc81e3c72}\label{class_map_a18202f9ebc5ddab14652bdacc81e3c72}} 
+sprite tla mapy \mbox{\Hypertarget{class_map_a18202f9ebc5ddab14652bdacc81e3c72}\label{class_map_a18202f9ebc5ddab14652bdacc81e3c72}} 
 \index{Map@{Map}!background\+Texture@{background\+Texture}}
 \index{background\+Texture@{background\+Texture}!Map@{Map}}
 \subsubsection{\texorpdfstring{background\+Texture}{backgroundTexture}}
 {\footnotesize\ttfamily sf\+::\+Texture Map\+::background\+Texture}
 
-\mbox{\Hypertarget{class_map_ad185fe5369037999533e218f3f7ade8a}\label{class_map_ad185fe5369037999533e218f3f7ade8a}} 
+tekstura tla mapy \mbox{\Hypertarget{class_map_ad185fe5369037999533e218f3f7ade8a}\label{class_map_ad185fe5369037999533e218f3f7ade8a}} 
 \index{Map@{Map}!block\+List@{block\+List}}
 \index{block\+List@{block\+List}!Map@{Map}}
 \subsubsection{\texorpdfstring{block\+List}{blockList}}
 {\footnotesize\ttfamily std\+::list$<$\hyperlink{class_abstract_map_block}{Abstract\+Map\+Block} $\ast$$>$ Map\+::block\+List}
 
-\mbox{\Hypertarget{class_map_a00d7fac6e87f2ac95d0182bbb22fdac4}\label{class_map_a00d7fac6e87f2ac95d0182bbb22fdac4}} 
+lista wszystkich blokow uzywanych w mapie \mbox{\Hypertarget{class_map_a00d7fac6e87f2ac95d0182bbb22fdac4}\label{class_map_a00d7fac6e87f2ac95d0182bbb22fdac4}} 
 \index{Map@{Map}!character@{character}}
 \index{character@{character}!Map@{Map}}
 \subsubsection{\texorpdfstring{character}{character}}
 {\footnotesize\ttfamily \hyperlink{class_character}{Character} Map\+::character}
 
-\mbox{\Hypertarget{class_map_acfd2fda55638ba32a092fac314f9f1c5}\label{class_map_acfd2fda55638ba32a092fac314f9f1c5}} 
+Reprezentacja postaci w grze \mbox{\Hypertarget{class_map_acfd2fda55638ba32a092fac314f9f1c5}\label{class_map_acfd2fda55638ba32a092fac314f9f1c5}} 
 \index{Map@{Map}!character\+Position\+MapX@{character\+Position\+MapX}}
 \index{character\+Position\+MapX@{character\+Position\+MapX}!Map@{Map}}
 \subsubsection{\texorpdfstring{character\+Position\+MapX}{characterPositionMapX}}
 {\footnotesize\ttfamily float Map\+::character\+Position\+MapX}
 
-\mbox{\Hypertarget{class_map_aa4e4d68c7babc74782b973a3b97431ea}\label{class_map_aa4e4d68c7babc74782b973a3b97431ea}} 
+pozycja x gracza na mapie (zgledem lewego gornego rogu mapy) \mbox{\Hypertarget{class_map_aa4e4d68c7babc74782b973a3b97431ea}\label{class_map_aa4e4d68c7babc74782b973a3b97431ea}} 
 \index{Map@{Map}!character\+Position\+MapY@{character\+Position\+MapY}}
 \index{character\+Position\+MapY@{character\+Position\+MapY}!Map@{Map}}
 \subsubsection{\texorpdfstring{character\+Position\+MapY}{characterPositionMapY}}
 {\footnotesize\ttfamily float Map\+::character\+Position\+MapY}
 
-\mbox{\Hypertarget{class_map_ac62ec077cb012a9fe7d987b466a48947}\label{class_map_ac62ec077cb012a9fe7d987b466a48947}} 
+pozycja y gracza na mapie (zgledem lewego gornego rogu mapy) \mbox{\Hypertarget{class_map_ac62ec077cb012a9fe7d987b466a48947}\label{class_map_ac62ec077cb012a9fe7d987b466a48947}} 
 \index{Map@{Map}!width\+Map@{width\+Map}}
 \index{width\+Map@{width\+Map}!Map@{Map}}
 \subsubsection{\texorpdfstring{width\+Map}{widthMap}}
 {\footnotesize\ttfamily int Map\+::width\+Map}
 
-
+szerokosc mapy 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
