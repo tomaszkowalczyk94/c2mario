@@ -9,4 +9,6 @@ Here is more information about project, necessary only in polish language:
 
 Here is a few screen from game:
 
-![screen1](http://w3.org/Icons/valid-xhtml10).
+![screen1](https://raw.githubusercontent.com/tomaszkowalczyk94/c2mario/master/screen1.PNG).
+![screen1](https://raw.githubusercontent.com/tomaszkowalczyk94/c2mario/master/screen2.PNG).
+![screen1](https://raw.githubusercontent.com/tomaszkowalczyk94/c2mario/master/screen3.PNG).
